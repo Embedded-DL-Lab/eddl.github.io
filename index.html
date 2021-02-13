@@ -1,86 +1,178 @@
 <!DOCTYPE html>
-<!-- saved from url=(0051)https://audio-visual-scene-understanding.github.io/ -->
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>CVPR 2021 Tutorial</title>
-    <link rel="stylesheet" href="./CVPR 2021 Tutorial_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./CVPR 2021 Tutorial_files/main.css">
-  </head>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-84629802-4"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-84629802-4');
+	</script>
 
-  <body>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="keywords" content="EPOS, 6D object pose, pose estimation, symmetry" />
+
+	<title>CVPR Tutorial 2021</title>
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css?1613208907a" rel="stylesheet">
+</head>
+
+<body>
 <div class="container">
-  <table border="0" align="center">
-    <tbody><tr>
-      <td width="1000" align="center" valign="middle"><h1>Mobile Visual Analytics</h1>
-        <h3>CVPR 2021 Tutorial</h3></td>
-    </tr>
-    <tr>
-      <td colspan="6" align="center"><h4><a href="http://wacv2021.thecvf.com/node/32" target="_blank"> Click here to join our tutorial </a></h4></td>
-    </tr>
-    <tr>
-      <td colspan="4" align="center"> <h5>Time: #</h5></td>
-    </tr>
-    <!-- <tr>
-        <td colspan="3" align="center"><h5> Location: #</h5></td>
-    </tr> -->
-    </tbody></table>
+
+<!--<div class="topnav">
+	<div>Opening words</div>
+	<div>Introduction</div>
+	<div>Traditional approaches</div>
+	<div>Latest developments of RANSAC</div>
+	<div>Mathematical programming</div>
+	<div>Differentiable approaches</div>
+	<div>Experiments</div>
+</div>-->
+	
+<div class="block">
+	<p class="title">Mobile Visual Analytics</p>
 </div>
 
-<br>
-    
-<!-- <div class="container">
-  <div class="imgDiv"><img class="cvprImg" src="https://convaistorageui.blob.core.windows.net/images/cvpr_tutorial/CVPR_image.png" /></div>
-</div> -->
+<!--<div class="block">
 
-<br>
+	<p class="subtitle">Important</p>
 
-<div class="container">
-  <h2>Overview</h2>
-    <p>As mobile devices and real-time scenarios are becoming more ubiquitous and prevalent, research on mobile visual analytics is extremely urgent. The purpose of mobile visual analytics is to enable entirely new on-device experiences. In the past few years, some effective techniques in mobile visual analytics have been developed to address many challenging issues in many aspects such as real-time detection or segmentation tasks under dynamically changing scenes and computationally constrained resources.
-    </p>
-    <p>In this tutorial, we first introduce some preliminaries of the tutorial and state-of-the-art approaches in some mobile visual tasks. Then, we present in-depth studies and analyses on the recently developed mobile visual techniques, including efficient backbone network design for mobile usage, rapid vision algorithm study for downstream tasks such as object detection and segmentation, and finally the context-aware algorithms under dynamic background for moving cameras. This topic covers two main aspects of mobile visual analytics: methods that can accelerate AI algorithms run for computational resource-constrained devices, and techniques that can leverage the contextual information under dynamic environments for mobile devices.
-    </p>
+	<p class="text">
+	The processed videos will be uploaded soon.</p>
+</div>-->
+
+<div class="block">
+
+	<p class="subtitle">Overview of the Tutorial</p>
+
+	<p class="text">As mobile devices and real-time scenarios are becoming more ubiquitous and prevalent, research on mobile visual analytics is extremely urgent. The purpose of mobile visual analytics is to enable entirely new on-device experiences. In the past few years, some effective techniques in mobile visual analytics have been developed to address many challenging issues in many aspects such as real-time detection or segmentation tasks under dynamically changing scenes and computationally constrained resources.</p>
 </div>
 
-<br>
+	<p class="text">In this tutorial, we first introduce some preliminaries of the tutorial and state-of-the-art approaches in some mobile visual tasks. Then, we present in-depth studies and analyses on the recently developed mobile visual techniques, including efficient backbone network design for mobile usage, rapid vision algorithm study for downstream tasks such as object detection and segmentation, and finally the context-aware algorithms under dynamic background for moving cameras. This topic covers two main aspects of mobile visual analytics: methods that can accelerate AI algorithms run for computational resource-constrained devices, and techniques that can leverage the contextual information under dynamic environments for mobile devices.</p>
+</div>
 
+<div class="block">
+	<p class="subtitle">Organizers</p>
+	
+		
+	<div class="organizers-box">
+	 
+		<div class="organizer-box">
+			<img class="organizer-picture" src="assets/ct.jpg">
+			<p class="name">Dr. Chen Tao</p>
+			<p class="email">eetchen@fudan.edu.cn</p>
+		</div>
+	 
+		<div class="organizer-box">
+			<img class="organizer-picture" src="assets/gh.jpg">
+			<p class="name">Dr. Gao Huang</p>
+			<p class="email">gaohuang@tsinghua.com</p>
+		</div>
+	 
+		<div class="organizer-box">
+			<img class="organizer-picture" src="assets/yg.jpg">
+			<p class="name">Dr. Gang Yu</p>
+			<p class="email">skicy@outlook.com</p>
+		</div>
+	 
+		</div>
+</div>
 
-    
+<div class="block" style="border-width: 0 0 0 0;">
+	
+	<div class="talk-separator">
+		Backbone Convolutional Network for Mobile Applications
+	</div>
+	
+	<table class="schedule-table">
+		<tr>
+			<td><font class="title">Official time</font><br>TBD</td>
+			<td><font class="title">Presenter</font><br>Dr. Chen Tao</td>
+			<td><img class="organizer-picture" src="assets/ct.jpg"></td>
+			<td rowspan=5><iframe width="560" height="315" src="https://www.youtube.com/embed/vRyMoRgvAp0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Short description</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div>Convolutional neural networks (CNNs) have been widely used as the backbone model in computer vision, and network architecture innovations are pushing forward the application of deep learning on mobile devices. This part of the tutorial will first review the SOTA efficient CNN backbones such as MobileNet, ShuffleNet, CondenseNet, etc, which were designed with human expertise. Then, neural architecture search (NAS), which aims to develop efficient backbone CNNs via an automated process, will be reviewed and discussed. Finally, we will introduce another important line of research that improves the inference efficiency of deep networks with dynamic architectures. Compared to the mainstream CNN backbones with static architectures, dynamic models can change its depth/width/parameters during the inference stage, conditioned on each input sample, thus leading to substantially reduce computational redundancy. The advantages of dynamic models and future directions will be discussed.</div></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Presentation</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-ct.pdf">Link to PDF</a></div></td>
+		</tr>
+	</table>
+	
+	<div class="talk-separator">
+		Detection and Segmentation for Mobile Analysis
+	</div>
+	
+	<table class="schedule-table">
+		<tr>
+			<td><font class="title">Official time</font><br>TBD</td>
+			<td><font class="title">Presenter</font><br>Dr. Gao Huang</td>
+			<td><img class="organizer-picture" src="assets/gh.jpg"></td>
+			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Short description</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div>Object detection and segmentation are two typical vision application tasks in computer vision. Mobile-based detection and segmentation is becoming increasingly critical in everyday on-device applications, such as face detection/recognition, augmented reality, etc. In this part, we will focus on discussing how to design an efficient and high-performance downstream neural network for detection and segmentation tasks. Specially, some specific criterias for detection tasks, such as good bounding box regression objective, categorical classification objective are carefully reviewed and discussed. For segmentation, how to design suitable network structure and head to consider both small and large-scale objects, are discussed. Further, the shape mismatching problem between arbitrarily changing objects and fixed-size receptive fields is also investigated and discussed, which has been shown to be valuable for fast semantic segmentation of video frames.
+</div></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Presentation</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-gh.pdf">Link to PDF</a></div></td>
+		</tr>
+	</table>
+	
+	<div class="talk-separator">
+		Context-aware Mobile Visual Analytics
+	</div>
+	
+	<table class="schedule-table">
+		<tr>
+			<td><font class="title">Official time</font><br>TBD</td>
+			<td><font class="title">Presenter</font><br>Dr. Gang Yu</td>
+			<td><img class="organizer-picture" src="assets/yg.jpg"></td>
+			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Short description</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div>The above-mentioned design scheme for the lightweight model mainly focuses on network structure and optimization objective design (different objectives dependent on different tasks) , they still do not consider the dynamically changing background and foreground under moving cameras, and also do not fully utilize the context information including temporal and spatially for inference. In this part, we will discuss some effective context-aware analysis techniques for moving cameras, and give in-depth study on how to utilize the temporal contextual information such as object motion, and spatial information such as surrounding objects centering around an object-of-interest for fast and accurate mobile vision analytics. In particular, some typical scenarios such as object-level motion detection, context-aware pedestrian intrusion detection will be introduced. </div></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Presentation</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-yg.pdf">Link to PDF</a></div></td>
+		</tr>
+	</table>
+	
+	
+</div>
 
-<br>
+</div>
 
+<!-- Bootstrap core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
+<script src="js/bootstrap.min.js"></script>
 
-
-<!--<p align="center" class="acknowledgement">Last updated: 30 July 2012</p>-->
-
-<script src="./CVPR 2021 Tutorial_files/jquery-3.3.1.slim.min.js.下载" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="./CVPR 2021 Tutorial_files/popper.min.js.下载" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="./CVPR 2021 Tutorial_files/bootstrap.min.js.下载" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-
-<script>
-//openCity(event, 'PST');
-document.getElementById("default_button").click(); // Click on the checkbox
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-</script>
-
-
-</body></html>
+</body>
+</html>
