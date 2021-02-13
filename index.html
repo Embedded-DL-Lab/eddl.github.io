@@ -1,292 +1,86 @@
 <!DOCTYPE html>
-<!-- saved from url=(0049)http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async="" src="./RANSAC in 2020_files/js"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [);
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-84629802-4');
-	</script>
+<!-- saved from url=(0051)https://audio-visual-scene-understanding.github.io/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CVPR 2021 Tutorial</title>
+    <link rel="stylesheet" href="./CVPR 2021 Tutorial_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CVPR 2021 Tutorial_files/main.css">
+  </head>
 
-	
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<meta name="keywords" content="EPOS, 6D object pose, pose estimation, symmetry">
-
-	<title>RANSAC in 2020</title>
-
-	<link href="./RANSAC in 2020_files/bootstrap.min.css" rel="stylesheet">
-<link href="./RANSAC in 2020_files/style.css" rel="stylesheet">
-</head>
-
-<body>
+  <body>
 <div class="container">
-
-<!--<div class="topnav">
-	<div>Opening words</div>
-	<div>Introduction</div>
-	<div>Traditional approaches</div>
-	<div>Latest developments of RANSAC</div>
-	<div>Mathematical programming</div>
-	<div>Differentiable approaches</div>
-	<div>Experiments</div>
-</div>-->
-	
-<div class="block">
-	<p class="title">RANSAC in 2020: A CVPR Tutorial</p>
+  <table border="0" align="center">
+    <tbody><tr>
+      <td width="1000" align="center" valign="middle"><h1>Mobile Visual Analytics</h1>
+        <h3>CVPR 2021 Tutorial</h3></td>
+    </tr>
+    <tr>
+      <td colspan="6" align="center"><h4><a href="http://wacv2021.thecvf.com/node/32" target="_blank"> Click here to join our tutorial </a></h4></td>
+    </tr>
+    <tr>
+      <td colspan="4" align="center"> <h5>Time: #</h5></td>
+    </tr>
+    <!-- <tr>
+        <td colspan="3" align="center"><h5> Location: #</h5></td>
+    </tr> -->
+    </tbody></table>
 </div>
 
-<!--<div class="block">
+<br>
+    
+<!-- <div class="container">
+  <div class="imgDiv"><img class="cvprImg" src="https://convaistorageui.blob.core.windows.net/images/cvpr_tutorial/CVPR_image.png" /></div>
+</div> -->
 
-	<p class="subtitle">Important</p>
+<br>
 
-	<p class="text">
-	The processed videos will be uploaded soon.</p>
-</div>-->
-
-<div class="block">
-
-	<p class="subtitle">Abstract</p>
-
-	<p class="text">The main objective of this tutorial is to present the latest developments in robust model fitting. The tutorial will show the recent advancements in all three lines of research, including new sampling and local optimization methods in the traditional approach, novel branch-and-bound and mathematical programming algorithms in the global methods, and latest developments in differentiable alternative to RANSAC.</p>
+<div class="container">
+  <h2>Overview</h2>
+    <p>As mobile devices and real-time scenarios are becoming more ubiquitous and prevalent, research on mobile visual analytics is extremely urgent. The purpose of mobile visual analytics is to enable entirely new on-device experiences. In the past few years, some effective techniques in mobile visual analytics have been developed to address many challenging issues in many aspects such as real-time detection or segmentation tasks under dynamically changing scenes and computationally constrained resources.
+    </p>
+    <p>In this tutorial, we first introduce some preliminaries of the tutorial and state-of-the-art approaches in some mobile visual tasks. Then, we present in-depth studies and analyses on the recently developed mobile visual techniques, including efficient backbone network design for mobile usage, rapid vision algorithm study for downstream tasks such as object detection and segmentation, and finally the context-aware algorithms under dynamic background for moving cameras. This topic covers two main aspects of mobile visual analytics: methods that can accelerate AI algorithms run for computational resource-constrained devices, and techniques that can leverage the contextual information under dynamic environments for mobile devices.
+    </p>
 </div>
 
-<div class="block">
-	<p class="subtitle">Organizers</p>
-	
-		
-	<div class="organizers-box">
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_dani.jpg">
-			<p class="name">Daniel Barath</p>
-			<p class="email">majti89@gmail.com</p>
-		</div>
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_dmytro.png">
-			<p class="name">Dmytro Mishkin</p>
-			<p class="email">ducha.aiki@gmail.com </p>
-		</div>
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_tj.jpg">
-			<p class="name">Tat-Jun Chin</p>
-			<p class="email">tat-jun.chin@adelaide.edu.au</p>
-		</div>
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_ondra.jpg">
-			<p class="name">Ondra Chum</p>
-			<p class="email">chum@cmp.felk.cvut.cz</p>
-		</div>
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_jiri.jpg">
-			<p class="name">Jiri Matas</p>
-			<p class="email">matas@cmp.felk.cvut.cz</p>
-		</div>
-	 
-		<div class="organizer-box">
-			<img class="organizer-picture" src="./RANSAC in 2020_files/pic_rene.jpg">
-			<p class="name">Rene Ranftl</p>
-			<p class="email">ranftlr@gmail.com</p>
-		</div>
-		</div>
-</div>
+<br>
 
-<div class="block" style="border-width: 0 0 0 0;">
-	<!--<p class="subtitle">Schedule</p>-->
-	
-	<!--<div class="talk-separator">
-		Opening words
-	</div>
-	
-	<table class="schedule-table">
-		<tr>
-			<td><font class="title">Official time</font><br>8.45 - 9.00 PDT</td>
-			<td><font class="title">Presenter</font><br>Daniel Barath</td>
-			<td><img class="organizer-picture" src="assets/pic_dani.jpg"></td>
-			<td rowspan=5><img style="width: 560px; height: 315px" src="assets/placeholder.png"></td>
-		</tr>
-		<tr>
-			<td colspan=3><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan=3><div>Opening words.</div></td>
-		</tr>
-		<tr>
-			<td colspan=3><font class="title"></font></td>
-		</tr>
-		<tr>
-			<td colspan=3></td>
-		</tr>
-	</table>-->
-	
-	<div class="talk-separator">
-		Introduction
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>9.00 - 9.45 PDT</td>
-			<td><font class="title">Presenter</font><br>Jiri Matas</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_jiri.jpg"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/vRyMoRgvAp0.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>Introduction. The formulation and taxonomy of robust model estimation. Example problems. Outline of the Tutorial.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Matas.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-	<div class="talk-separator">
-		Traditional approaches
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>9.45 - 10.45 PDT</td>
-			<td><font class="title">Presenter</font><br>Ondra Chum</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_ondra.jpg"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/L56FRRAXGuA.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>Traditional approaches for robust model fitting. Modules of the USAC framework.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Chum.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-	<div class="talk-separator">
-		Latest developments in RANSAC
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>11.00 - 12.30 PDT</td>
-			<td><font class="title">Presenter</font><br>Daniel Barath</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_dani.jpg"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/Nfd9dzeSSG8.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>The latest developments in the traditional RANSAC-like approaches.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Barath.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-	<div class="talk-separator">
-		Mathematical programming approaches
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>13.30 - 15.00 PDT</td>
-			<td><font class="title">Presenter</font><br>Tat-Jun Chin</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_tj.jpg"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/WkN3FP_jbuI.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>Mathematical programming approaches including globally optimal algorithms (branch-and-bound, fixed-parameter tractable algorithms, etc.), deterministic refinement techniques, and preprocessing methods.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Chin.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-	<div class="talk-separator">
-		Differentiable approaches
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>15.15 - 16.30 PDT</td>
-			<td><font class="title">Presenter</font><br>Rene Ranftl</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_rene.jpg"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/RrozeBqzq2c.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>The latest developments in differentiable approaches for robust estimation.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Ranftl.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-	<div class="talk-separator">
-		Experiments
-	</div>
-	
-	<table class="schedule-table">
-		<tbody><tr>
-			<td><font class="title">Official time</font><br>16.30 - 17.30 PDT</td>
-			<td><font class="title">Presenter</font><br>Dmytro Mishkin</td>
-			<td><img class="organizer-picture" src="./RANSAC in 2020_files/pic_dmytro.png"></td>
-			<td rowspan="5"><iframe width="560" height="315" src="./RANSAC in 2020_files/igRydL72160.html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div>A thorough experimental comparison of the state-of-the-art methods on fundemantel and essential matrix, PnP, homography and rigid transformation estimation.</div></td>
-		</tr>
-		<tr>
-			<td colspan="3"><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan="3"><div><a target="blank" href="http://cmp.felk.cvut.cz/cvpr2020-ransac-tutorial/presentations/RANSAC-CVPR20-Mishkin.pdf">Link to PDF</a></div></td>
-		</tr>
-	</tbody></table>
-	
-</div>
 
-</div>
+    
 
-<!-- Bootstrap core JavaScript -->
-<script src="./RANSAC in 2020_files/jquery.min.js.下载"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery.min.js"><\/script>')</script>
-<script src="./RANSAC in 2020_files/bootstrap.min.js.下载"></script>
+<br>
 
+
+
+<!--<p align="center" class="acknowledgement">Last updated: 30 July 2012</p>-->
+
+<script src="./CVPR 2021 Tutorial_files/jquery-3.3.1.slim.min.js.下载" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="./CVPR 2021 Tutorial_files/popper.min.js.下载" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="./CVPR 2021 Tutorial_files/bootstrap.min.js.下载" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<script>
+//openCity(event, 'PST');
+document.getElementById("default_button").click(); // Click on the checkbox
+function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+</script>
 
 
 </body></html>
