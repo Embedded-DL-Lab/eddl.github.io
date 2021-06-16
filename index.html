@@ -37,7 +37,7 @@
 	<div>Experiments</div>
 </div>-->
 	
-<div class="block">
+<div class="container">
 	<p class="title">Mobile Visual Analytics</p>
 </div>
 
@@ -49,17 +49,17 @@
 	The processed videos will be uploaded soon.</p>
 </div>-->
 
-<div class="block">
+<div class="container">
 
 	<p class="subtitle">Overview of the Tutorial</p>
 
 	<p class="text">As mobile devices and real-time scenarios are becoming more ubiquitous and prevalent, research on mobile visual analytics is extremely urgent. The purpose of mobile visual analytics is to enable entirely new on-device experiences. In the past few years, some effective techniques in mobile visual analytics have been developed to address many challenging issues in many aspects such as real-time detection or segmentation tasks under dynamically changing scenes and computationally constrained resources.</p>
 </div>
 
-	<p class="text">In this tutorial, we first introduce some preliminaries of the tutorial and state-of-the-art approaches in some mobile visual tasks. Then, we present in-depth studies and analyses on the recently developed mobile visual techniques, including efficient backbone network design for mobile usage, rapid vision algorithm study for downstream tasks such as object detection and segmentation, and finally the context-aware algorithms under dynamic background for moving cameras. This topic covers two main aspects of mobile visual analytics: methods that can accelerate AI algorithms run for computational resource-constrained devices, and techniques that can leverage the contextual information under dynamic environments for mobile devices.</p>
+	<p class="text">In this tutorial, we first introduce some preliminaries of the tutorial and state-of-the-art approaches in some mobile visual tasks. Then, we present in-depth studies and analyses on the recently developed mobile visual techniques, including efficient backbone network design for mobile usage, generative adversarial network for mobile applications, and finally the context-aware algorithms under dynamic background for moving cameras. This topic covers two main aspects of mobile visual analytics: methods that can accelerate AI algorithms run for computational resource-constrained devices, and techniques that can leverage the contextual information under dynamic environments for mobile devices.</p>
 </div>
 
-<div class="block">
+<div class="container">
 	<p class="subtitle">Organizers</p>
 	
 		
@@ -89,40 +89,26 @@
 		</div>
 </div>
 
-<div class="block" style="border-width: 0 0 0 0;">
+
+<div class="container">
+
+	<p class="subtitle">Schedule of the Tutorial</p>
+	<p class="text">10:00-10:10 AM   Opening Remarks (Tao Chen)</p>
+	<p class="text">10:10-11:10 AM   Convolutional Networks for Mobile Applications (Gao Huang)</p>
+	<p class="text">11:10-12:10 PM   Generative Adversarial Network for Mobile Applications (Gang Yu)</p>
+	<p class="text">12:10-1:10   PM   Context-aware Mobile Visual Analysis (Tao Chen)</p>
+	<p class="text">1:10-1:30 PM   Questions and Panel Discussion</p>
+
+
+<div class="container" style="border-width: 0 0 0 0;">
 	
 	<div class="talk-separator">
-		Backbone Convolutional Network for Mobile Applications
+		Convolutional Networks for Mobile Applications
 	</div>
 	
 	<table class="schedule-table">
 		<tr>
-			<td><font class="title">Official time</font><br>TBD</td>
-			<td><font class="title">Presenter</font><br>Dr. Chen Tao</td>
-			<td><img class="organizer-picture" src="assets/ct.jpg"></td>
-			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-		</tr>
-		<tr>
-			<td colspan=3><font class="title">Short description</font></td>
-		</tr>
-		<tr>
-			<td colspan=3><div>Convolutional neural networks (CNNs) have been widely used as the backbone model in computer vision, and network architecture innovations are pushing forward the application of deep learning on mobile devices. This part of the tutorial will first review the SOTA efficient CNN backbones such as MobileNet, ShuffleNet, CondenseNet, etc, which were designed with human expertise. Then, neural architecture search (NAS), which aims to develop efficient backbone CNNs via an automated process, will be reviewed and discussed. Finally, we will introduce another important line of research that improves the inference efficiency of deep networks with dynamic architectures. Compared to the mainstream CNN backbones with static architectures, dynamic models can change its depth/width/parameters during the inference stage, conditioned on each input sample, thus leading to substantially reduce computational redundancy. The advantages of dynamic models and future directions will be discussed.</div></td>
-		</tr>
-		<tr>
-			<td colspan=3><font class="title">Presentation</font></td>
-		</tr>
-		<tr>
-			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-ct.pdf">Link to PDF</a></div></td>
-		</tr>
-	</table>
-	
-	<div class="talk-separator">
-		Detection and Segmentation for Mobile Analysis
-	</div>
-	
-	<table class="schedule-table">
-		<tr>
-			<td><font class="title">Official time</font><br>TBD</td>
+			<td><font class="title">Official time</font><br>10:10-11:10 AM</td>
 			<td><font class="title">Presenter</font><br>Dr. Gao Huang</td>
 			<td><img class="organizer-picture" src="assets/gh.jpg"></td>
 			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
@@ -131,8 +117,7 @@
 			<td colspan=3><font class="title">Short description</font></td>
 		</tr>
 		<tr>
-			<td colspan=3><div>Object detection and segmentation are two typical vision application tasks in computer vision. Mobile-based detection and segmentation is becoming increasingly critical in everyday on-device applications, such as face detection/recognition, augmented reality, etc. In this part, we will focus on discussing how to design an efficient and high-performance downstream neural network for detection and segmentation tasks. Specially, some specific criterias for detection tasks, such as good bounding box regression objective, categorical classification objective are carefully reviewed and discussed. For segmentation, how to design suitable network structure and head to consider both small and large-scale objects, are discussed. Further, the shape mismatching problem between arbitrarily changing objects and fixed-size receptive fields is also investigated and discussed, which has been shown to be valuable for fast semantic segmentation of video frames.
-</div></td>
+			<td colspan=3><div>Convolutional neural networks (CNNs) have been widely used as the backbone model in computer vision, and network architecture innovations are pushing forward the application of deep learning on mobile devices. This part of the tutorial will first review the SOTA efficient CNN backbones such as MobileNet, ShuffleNet, CondenseNet, etc, which adopt static structures and parameters. Then, we will focus on dynamic convolutional networks which improve the inference efficiency with data-dependent architectures or parameters. In specific, we will introduce three types of dynamic networks, namely, sample-wise, spatial-wise and temporal-wise dynamic models. The advantages and limitations of them as well as future directions will be discussed.</div></td>
 		</tr>
 		<tr>
 			<td colspan=3><font class="title">Presentation</font></td>
@@ -143,14 +128,40 @@
 	</table>
 	
 	<div class="talk-separator">
-		Context-aware Mobile Visual Analytics
+		Generative Adversarial Network for Mobile Applications
 	</div>
 	
 	<table class="schedule-table">
 		<tr>
-			<td><font class="title">Official time</font><br>TBD</td>
+			<td><font class="title">Official time</font><br>11:10-12:10 PM</td>
 			<td><font class="title">Presenter</font><br>Dr. Gang Yu</td>
 			<td><img class="organizer-picture" src="assets/yg.jpg"></td>
+			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Short description</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div>Generative Adversarial Network (GAN) has been introduced in 2014 and has been rapidly developed in the recent five years. In industry, GAN has been applied for mobile devices with impressive applications like Face Cartoon generation and human pose transfer. In this tutorial, we will give the techniques underlying these GAN based applications. More specifically, we will first start from introduction of the GAN technique. Then we will describe the GAN application from different aspects like Face, Human, and Font. Finally, the techniques which are important for mobile applications will also be highlighted in the tutorial. 
+</div></td>
+		</tr>
+		<tr>
+			<td colspan=3><font class="title">Presentation</font></td>
+		</tr>
+		<tr>
+			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-yg.pdf">Link to PDF</a></div></td>
+		</tr>
+	</table>
+	
+	<div class="talk-separator">
+		Context-aware Mobile Visual Analysis
+	</div>
+	
+	<table class="schedule-table">
+		<tr>
+			<td><font class="title">Official time</font><br>12:10-1:10 PM</td>
+			<td><font class="title">Presenter</font><br>Dr. Tao Chen</td>
+			<td><img class="organizer-picture" src="assets/ct.jpg"></td>
 			<td rowspan=5><iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
 		</tr>
 		<tr>
@@ -163,7 +174,7 @@
 			<td colspan=3><font class="title">Presentation</font></td>
 		</tr>
 		<tr>
-			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-yg.pdf">Link to PDF</a></div></td>
+			<td colspan=3><div><a target="blank" href="presentations/cvpr-2021-ct.pdf">Link to PDF</a></div></td>
 		</tr>
 	</table>
 	
